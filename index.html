@@ -18,7 +18,7 @@
                     <input type="text" class="form-control" v-model="name">
                     <label>Note</label>
                     <input type="number" max="20" min="0" class="form-control" v-model="note">
-                    <input type="button" value="Save" class="btn btn-success">
+                    <input type="button" value="Save" class="btn btn-success" v-on:click="AddNote">
                 </div>
                 <div class="col-md-6 col-xs-12">
                     <h1>Notes list</h1>
