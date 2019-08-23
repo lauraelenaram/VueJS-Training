@@ -1,11 +1,31 @@
 var app= new Vue({
     el: '#app',
-    data: {
-        list: [
-            {name: 'Carlos', note: '2', status: false},
-            {name: 'Laura', note: '8', status: true},
-            {name: 'Daniel', note: '10', status: true}
-        ],
+    data: 
+    {
+        list: [],
+        name: '',
+        note: ''
+    },
+    methods: 
+    {
+        AddNote: function()
+        {
+            statusA= false;
+            if(this.note>=6)
+            {
+                statusA= true;
+            }
+            if(this.name!="" && this.note!="")
+            {
+                this.list.push({name: this.name, note: this.note, status: statusA});
+                this.name="";
+                this.note="";
+            }
+            else
+            {
+                alert("Ingrese el nombre y el promedio del estudiante");
+            }
+        }
     }
    
 })
