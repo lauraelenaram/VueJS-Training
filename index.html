@@ -13,19 +13,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-                    <h1>Add note</h1>
-                    <label>Name</label>
+                    <h1>Agregar nota</h1>
+                    <label>Nombre</label>
                     <input type="text" class="form-control" v-model="name">
-                    <label>Note</label>
-                    <input type="number" max="20" min="0" class="form-control" v-model="note">
-                    <input type="button" value="Save" class="btn btn-success" v-on:click="AddNote">
+                    <label>Promedio</label>
+                    <input type="number" max="10" min="0" class="form-control" v-model="note">
+                    <input type="button" value="Guardar" class="btn btn-success" v-on:click="AddNote">
                 </div>
                 <div class="col-md-6 col-xs-12">
-                    <h1>Notes list</h1>
+                    <h1>Lista de promedios</h1>
                     <table class="table">
                         <tr>
-                            <th>Name</th>
-                            <th>Note</th>
+                            <th>Nombre</th>
+                            <th>Promedio</th>
                         </tr>
                         <tr v-for="item in list" v-bind:style="item.status==false?'color:red':'color:green'">
                             <td v-text="item.name"></td>
